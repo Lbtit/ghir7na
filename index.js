@@ -1,5 +1,7 @@
 let monInput = document.getElementById("monInput");
 let button = document.getElementById("btn1");
+let button2 = document.getElementById("btn2");
+let hideDiv = document.getElementById("hide");
 
 button.addEventListener("click", () => {
   let link = monInput.value;
@@ -20,5 +22,13 @@ button.addEventListener("click", () => {
 
     // Ouvrir une nouvelle fenêtre avec le contenu de la variable result
     window.open(result, "_blank");
+  }
+});
+
+button2.addEventListener("click", () => {
+  if (hideDiv.style.display === "none") {
+    hideDiv.style.display = "block";
+  } else {
+    hideDiv.style.display = "none";
   }
 });
